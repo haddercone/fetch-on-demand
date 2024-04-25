@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react"
 
+interface Product {
+    id: number;
+    title: string;
+    images :string[]
+}
+
 const Products = () => {
     const [currentProduct, setCurrentProduct] = useState(1);
     const [loading, setLoading] = useState(false);
-    const [products, setProducts] = useState<any[]>([]);
+    const [products, setProducts] = useState<Product[]>([]);
 
     
     useEffect(() => {
